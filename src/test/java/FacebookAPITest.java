@@ -121,7 +121,7 @@ public class FacebookAPITest {
 
         //publishing a photo (POST)
 
-        FacebookType postPhotoResponse = facebookClient.publish("me/photos", FacebookType.class, BinaryAttachment.with("city.jpg", getClass().getResourceAsStream("/city.jpg")), Parameter.with("message", "I was here!"));
+        FacebookType postPhotoResponse = facebookClient.publish("me/photos", FacebookType.class, BinaryAttachment.with("city.jpg", getClass().getResourceAsStream("c:\Users\draicu\Desktop\city.jpg")), Parameter.with("message", "I was here!"));
         System.out.println("Published photo ID: " + postPhotoResponse.getId());
 
         String photoId = postPhotoResponse.getId();
